@@ -3,12 +3,28 @@
  */
 package Todoapp;
 
+import Controller.ProjectController;
+import model.Project;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
+   
+    public static void main(String[] args) throws ClassNotFoundException {
+        
+        ProjectController projectController = new ProjectController ();
+        
+        Project project = new  Project();
+        project.setName ("Projeto teste");
+        project.setDescription ("Descrição teste");
+        projectController.save(project);
+
+//        project.setName ( "Novo nome de projeto");
+//        projectController.update(project);
+
+//        List<project> projects = projectController.getAll();
+//        System.out.println ("Total de projetos: " + projects.size());
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+    Object getGreeting () {
+        throw new UnsupportedOperationException ( "Not supported yet." ); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

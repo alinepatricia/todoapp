@@ -4,7 +4,9 @@
  */
 package model;
 
-import java.sql.Date;
+import java.util.Date;
+import java.util.List;
+import java.util.logging.Logger;
 
 /**
 
@@ -17,6 +19,7 @@ public class Project {
     private String description;
     private Date createdAt;
     private Date updatedAt;
+    private static final Logger LOG = Logger.getLogger(Project.class.getName());
 
     public Project(int id, String name, String description, Date createdAt, Date updatedAt) {
         this.id = id;
@@ -24,6 +27,55 @@ public class Project {
         this.description = description;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+    }
+
+    public Project() {
+        this.createdAt = new Date();
+        this.updatedAt = new Date();
+    }
+
+    public int getId () {
+        return id;
+    }
+
+    public void setId ( int id ) {
+        this.id = id;
+    }
+
+    public String getName () {
+        return name;
+    }
+
+    public void setName ( String name ) {
+        this.name = name;
+    }
+
+    public String getDescription () {
+        return description;
+    }
+
+    public void setDescription ( String description ) {
+        this.description = description;
+    }
+
+    public Date getCreatedAt () {
+        return createdAt;
+    }
+
+    public void setCreatedAt ( Date createdAt ) {
+        this.createdAt = createdAt;
+    }
+
+    public Date getUpdatedAt () {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt ( Date updatedAt ) {
+        this.updatedAt = updatedAt;
+    }
+
+    public void add ( Project project ) {
+        throw new UnsupportedOperationException ( "Not supported yet." ); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

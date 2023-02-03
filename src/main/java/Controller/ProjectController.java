@@ -12,7 +12,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import model.Project;
-import model.Task;
 import util.ConnectionFactory;
 
 /**
@@ -23,14 +22,14 @@ public class ProjectController {
 
     private int Id;
     
-public void save (Project project) {
+public void save (Project project) throws ClassNotFoundException {
        String sql = "INSERT INTO projects (name, description, createdAt, updatedAt) VALUES (?, ?, ?, ?)";
 
        Connection connection = null;
        PreparedStatement statement = null;
 
         try {
-            connection = ConnectionFactory.getConnection ();
+            connection = ConnectionFactory.getConnection();
             statement = connection.prepareStatement ( sql );
 
             statement.setString ( 2, project.getDescription ());
@@ -39,8 +38,8 @@ public void save (Project project) {
             statement.setDate ( 8, new Date (project.getUpdatedAt ().getTime ()));
             statement.execute ();
             
-        } catch ( Exception ex) {
-            throw new RuntimeException ("Erro ao salvar tarefa" + ex.getMessage (), ex);
+        } catch (SQLException ex) {
+            throw new RuntimeException ("Erro ao salvar tarefa", ex);
         } finally {
             ConnectionFactory.closeConnection ( connection, statement );
         }
@@ -66,7 +65,7 @@ public void save (Project project) {
             throw new RuntimeException ("Erro ao atualizar tarefa" + ex.getMessage(), ex);
         } 
     }  
-public List<Project> getAll (){
+public List<Project> getAll () throws ClassNotFoundException{
         
         String sql = "SELECT * FROM projects";
         
@@ -103,7 +102,11 @@ public List<Project> getAll (){
         return Projects;
     } 
 
-        public void removeById(int idProject){
+    /**
+     *
+     * @param idProject
+     */
+    public void removeById(int idProject) throws ClassNotFoundException{
 
         String sql = "DELETE FROM projects WHERE id = ?";
 
