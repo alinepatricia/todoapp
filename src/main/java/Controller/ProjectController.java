@@ -105,6 +105,7 @@ public List<Project> getAll () throws ClassNotFoundException{
     /**
      *
      * @param idProject
+     * @throws java.lang.ClassNotFoundException
      */
     public void removeById(int idProject) throws ClassNotFoundException{
 

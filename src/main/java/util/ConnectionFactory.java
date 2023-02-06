@@ -13,14 +13,15 @@ import java.sql.SQLException;
 
 /**
 
- @author bruno
+ @author aline
  */
 public class ConnectionFactory {
+    
     public static final String DRIVER = "com.mysql.jdbc.Driver";
     public static final String URL = "jdbc:mysql://localhost:3307/todoapp";
     public static final String USER = "root";
     public static final String PASS = "";
-
+    
 
 
 
@@ -30,19 +31,14 @@ public class ConnectionFactory {
             return DriverManager.getConnection (URL, USER, PASS);
         } catch (SQLException ex) {
            throw new RuntimeException("Erro ao fechar a conexão com o Banco de Dados", ex);
-} 
-
-}
-
-    /**
-     *
-     * @param connection
-     */
+        }
+    }
+    
     public static void closeConnection(Connection connection) {
-         try {
-             if (connection != null) {
-                 connection.close();
-         }
+        try {
+            if (connection != null) {
+                connection.close();
+            }
          } catch (SQLException e){ 
                 throw new RuntimeException(e); 
           }
@@ -58,29 +54,32 @@ public class ConnectionFactory {
                  statement.close();
              }
 
-         } catch (Exception ex) {
+        } catch (Exception ex) {
             throw new RuntimeException("Erro ao fechar a conexão com o Banco de Dados", ex);
-         }
+        }
 
     }
-
+    
     public static void closeConnection(Connection connection, PreparedStatement statement, ResultSet resultSet){
-         try {
+        try {
              if (connection != null) {
                  connection.close();
              }
-             if (statement != null) {
-                 statement.close();
-             }
+            if (statement != null) {
+                statement.close();
+            }
 
              if (resultSet != null) {
                  resultSet.close();
              }
 
-         } catch (Exception ex) {
+        } catch (Exception ex) {
             throw new RuntimeException("Erro ao fechar a conexão com o Banco de Dados", ex);
-         }
-
+        }
+        
     }
 
+    public static void closeConnection(Connection connection, PreparedStatement statement, ResultSet resultSet) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
