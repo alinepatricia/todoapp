@@ -8,7 +8,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test void appHasAGreeting() {
-        App classUnderTest = new App();
+       var classUnderTest = newApp();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+
+    private App newApp() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
+

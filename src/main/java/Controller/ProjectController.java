@@ -23,7 +23,7 @@ public class ProjectController {
     private int Id;
     
 public void save (Project project) throws ClassNotFoundException {
-       String sql = "INSERT INTO projects (name, description, createdAt, updatedAt) VALUES (?, ?, ?, ?)";
+       String sql = "INSERT INTO Projects (name, description, createdAt, updatedAt) VALUES (?, ?, ?, ?)";
 
        Connection connection = null;
        PreparedStatement statement = null;
@@ -32,10 +32,10 @@ public void save (Project project) throws ClassNotFoundException {
             connection = ConnectionFactory.getConnection();
             statement = connection.prepareStatement ( sql );
 
-            statement.setString ( 2, project.getDescription ());
-            statement.setString ( 3, project.getName ());
-            statement.setDate ( 6, new Date (project.getCreatedAt ().getTime ()));
-            statement.setDate ( 8, new Date (project.getUpdatedAt ().getTime ()));
+            statement.setString ( 1, project.getDescription ());
+            statement.setString ( 2, project.getName ());
+            statement.setDate ( 3, new Date (project.getCreatedAt ().getTime ()));
+            statement.setDate ( 4, new Date (project.getUpdatedAt ().getTime ()));
             statement.execute ();
             
         } catch (SQLException ex) {

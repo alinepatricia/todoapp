@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"Todoapp","l":"App"},{"p":"util","l":"ConnectionFactory"},{"p":"view","l":"MainScreen"},{"p":"model","l":"Project"},{"p":"Controller","l":"ProjectController"},{"p":"view","l":"ProjectDialogScreen"},{"p":"model","l":"Task"},{"p":"Controller","l":"TaskController"},{"p":"view","l":"TaskDialogScreen"}]

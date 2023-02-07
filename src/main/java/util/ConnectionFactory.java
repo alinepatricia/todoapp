@@ -24,7 +24,6 @@ public class ConnectionFactory {
     
 
 
-
       public static java.sql.Connection getConnection() throws ClassNotFoundException, SQLException {
         try {
             Class.forName (DRIVER);
@@ -79,7 +78,4 @@ public class ConnectionFactory {
         
     }
 
-    public static void closeConnection(Connection connection, PreparedStatement statement, ResultSet resultSet) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

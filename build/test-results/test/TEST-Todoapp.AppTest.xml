@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Todoapp.AppTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-02-01T22:19:16" hostname="LAPTOP-CCT3QMHG" time="0.127">
+<testsuite name="Todoapp.AppTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-02-07T14:50:03" hostname="LAPTOP-CCT3QMHG" time="0.092">
   <properties/>
-  <testcase name="appHasAGreeting()" classname="Todoapp.AppTest" time="0.127">
+  <testcase name="appHasAGreeting()" classname="Todoapp.AppTest" time="0.092">
     <failure message="java.lang.UnsupportedOperationException: Not supported yet." type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Not supported yet.
-	at Todoapp.App.getGreeting(App.java:28)
-	at Todoapp.AppTest.appHasAGreeting(AppTest.java:12)
+	at Todoapp.AppTest.newApp(AppTest.java:16)
+	at Todoapp.AppTest.appHasAGreeting(AppTest.java:11)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
