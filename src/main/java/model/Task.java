@@ -4,7 +4,9 @@
  */
 package model;
 
-import java.sql.Date;
+import java.util.Date;
+import java.util.List;
+import java.util.logging.Logger;
 
 /**
 
@@ -36,6 +38,7 @@ public class Task {
 
     public Task(){
         this.createdAt = new Date (id );
+        this.updatedAt = new Date();
 }
 
     public int getId () {

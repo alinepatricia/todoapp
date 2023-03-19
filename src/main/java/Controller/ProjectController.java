@@ -91,7 +91,7 @@ public List<Project> getAll () throws ClassNotFoundException{
                 project.setCreatedAt ( resultSet.getDate ( "createdAt"));
                 project.setUpdatedAt (resultSet.getDate ("updatedAt"));
 
-                project.add ( project );
+                Projects.add ( project );
             }
         } catch (SQLException ex ) {
                 throw new RuntimeException ("Erro ao buscar projetos", ex);

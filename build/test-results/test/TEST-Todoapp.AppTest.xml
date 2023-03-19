@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Todoapp.AppTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-02-07T14:50:03" hostname="LAPTOP-CCT3QMHG" time="0.092">
+<testsuite name="Todoapp.AppTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-03-01T21:09:04" hostname="LAPTOP-CCT3QMHG" time="0.099">
   <properties/>
-  <testcase name="appHasAGreeting()" classname="Todoapp.AppTest" time="0.092">
+  <testcase name="appHasAGreeting()" classname="Todoapp.AppTest" time="0.099">
     <failure message="java.lang.UnsupportedOperationException: Not supported yet." type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Not supported yet.
 	at Todoapp.AppTest.newApp(AppTest.java:16)
 	at Todoapp.AppTest.appHasAGreeting(AppTest.java:11)

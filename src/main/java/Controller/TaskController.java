@@ -10,19 +10,18 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import model.Task;
 import util.ConnectionFactory;
 
 /**
 
- @author bruno
+ @author aline
  */
 public class TaskController {
 
     public void save (Task task) {
-       String sql = "INSERT INTO tasks (idProject, name, description, completed, notes, deadline, createdAt, updatedAt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+       String sql = "INSERT INTO Tasks (idProject, name, description, completed, notes, deadline, createdAt, updatedAt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
        Connection connection = null;
        PreparedStatement statement = null;
@@ -71,7 +70,7 @@ public class TaskController {
         } 
     }  
 
-    public void removeById(int taskId) throws SQLException{
+    public void removeById(int taskId) {
 
         String sql = "DELETE FROM tasks WHERE id = ?";
 
@@ -98,7 +97,7 @@ public class TaskController {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
 
-        List<Task> tasks = new ArrayList<Task> ();
+        List<Task> tasks = new ArrayList <>();
 
         try {
             connection = ConnectionFactory.getConnection ();
@@ -128,10 +127,4 @@ public class TaskController {
 
         return tasks;
     } 
-
-    private static class Taks {
-
-        public Taks () {
-        }
-    }
 }
