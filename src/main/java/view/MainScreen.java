@@ -10,12 +10,16 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.HashSet;
 import javax.swing.DefaultListModel;
 import model.Project;
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Task;
+import util.ButtonColumnCellRederer;
+import util.DeadlineColumnCellRederer;
 import util.TaskTableModel;
 
 /**
@@ -32,10 +36,11 @@ public class MainScreen extends javax.swing.JFrame {
 
     public MainScreen() throws ClassNotFoundException {
         initComponents();
-        decorateTableTask();
 
         initDataController();
         initComponentsModel();
+
+        decorateTableTask();
     }
 
     /**
@@ -461,7 +466,14 @@ public void decorateTableTask() {
     jTableTasks.getTableHeader ().setBackground ( new Color(153, 0, 153));
     jTableTasks.getTableHeader ().setForeground ( new Color(255,255,254));
 
-    jTableTasks.setAutoCreateRowSorter ( true);
+    jTableTasks.getColumnModel().getColumn ( 2).setCellRenderer ( new DeadlineColumnCellRederer());
+
+    jTableTasks.getColumnModel ().getColumn ( 4).setCellRenderer ( new ButtonColumnCellRederer("edit"));
+
+    jTableTasks.getColumnModel ().getColumn ( 5).setCellRenderer ( new ButtonColumnCellRederer("delete"));
+
+
+    //jTableTasks.setAutoCreateRowSorter ( true);
 }
 
 public void initDataController(){
