@@ -93,7 +93,7 @@ public class MainScreen extends javax.swing.JFrame {
             jPanelToolbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelToolbarLayout.createSequentialGroup()
                 .addGroup(jPanelToolbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelToolbarTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 692, Short.MAX_VALUE)
+                    .addComponent(jLabelToolbarTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabelToolbarSubTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -377,6 +377,7 @@ public class MainScreen extends javax.swing.JFrame {
                 taskController.update (task );
                 break;
             case 4:
+                
                 break;
             case 5:
                 taskController.removeById ( task.getId ());
@@ -471,7 +472,6 @@ public void decorateTableTask() {
     jTableTasks.getColumnModel ().getColumn ( 4).setCellRenderer ( new ButtonColumnCellRederer("edit"));
 
     jTableTasks.getColumnModel ().getColumn ( 5).setCellRenderer ( new ButtonColumnCellRederer("delete"));
-
 
     //jTableTasks.setAutoCreateRowSorter ( true);
 }

@@ -14,7 +14,7 @@ import model.Task;
 
 /**
 
- @author bruno
+ @author aline
  */
 public class DeadlineColumnCellRederer extends DefaultTableCellRenderer {
     
