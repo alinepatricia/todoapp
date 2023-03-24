@@ -25,7 +25,7 @@ Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando 
   <tr>
     <td align="center">
       <a href="http://github.com/alinegarbato">
-        <img src="[https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Tati Alves no GitHub](https://github.com/alinegarbato/todoapp/blob/main/octocat-1679669901194.png)"/><br>
+        <img src="https://github.com/alinegarbato/todoapp/blob/main/octocat-1679669901194.png" width="100px;"/><br>
         <sub>
           <b>alinegarbato</b>
         </sub>
@@ -35,3 +35,5 @@ Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando 
 </table>
 
 ## :dart: Status do projeto
+
+Em fase final de atualizações
